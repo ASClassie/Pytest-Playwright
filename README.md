@@ -1,2 +1,4 @@
 # Pytest-Playwright
-This is a small fraework created by me in Playwright
+<b>
+This is a small framework created by me in Playwright
+</b>
