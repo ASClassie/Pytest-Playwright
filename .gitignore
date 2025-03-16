@@ -1,0 +1,11 @@
+# Ignore specific files inside `tests/`
+tests/test_dashboard.py
+downloads/*
+
+# Ignore specific files inside `pages/`
+pages/ABESIT.py
+pages/Python_practice.py
+
+# Ignore specific files in the root directory
+practice.jpg
+.env
