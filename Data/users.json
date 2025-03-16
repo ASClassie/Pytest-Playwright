@@ -1,0 +1,17 @@
+[
+    {
+        "username": "abhaysharmagzb@gmail.com",
+        "password": "Test@123",
+        "expected_error": "Invalid credentials"
+    },
+    {
+        "username": "user2",
+        "password": "password2",
+        "expected_error": "Invalid credentials"
+    },
+    {
+        "username": "admin",
+        "password": "admin123",
+        "expected_error": "Account locked"
+    }
+]
