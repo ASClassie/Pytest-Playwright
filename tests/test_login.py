@@ -1,3 +1,4 @@
+import time
 from xml.dom import VALIDATION_ERR
 
 import pytest
@@ -24,16 +25,18 @@ def invalid_user():
 
 class TestLogin:
 
+    # @pytest.mark.smoke
     def test_successfull_login(self, page, valid_user):
         login_page = LoginPage(page)
         login_page.navigate('https://qainfotech5-dev-ed.my.salesforce.com/')
         login_page.login(valid_user['username'], valid_user['password'])
         print(page.url)
-
+        time.sleep(2)
     @pytest.mark.parametrize("users", invalid_user())
     def test_invalid_login(self, page, users):
         login_page = LoginPage(page)
         login_page.navigate('https://qainfotech5-dev-ed.my.salesforce.com/')
         login_page.login(users['username'], users['password'])
         expect(page.locator('#error')).to_have_text(VALIDATION_ERR)
+        time.sleep(2)
         # assert VALIDATION_ERR in page.inner_text('#error')

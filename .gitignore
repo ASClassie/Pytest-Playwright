@@ -2,6 +2,18 @@
 tests/test_dashboard.py
 downloads/*
 
+# Ignore PyCharm project files
+.idea/
+
+# Ignore Python cache files
+__pycache__/
+
+# Ignore Playwright reports (if applicable)
+playwright-report/
+
+# Ignore virtual environments (if applicable)
+venv/
+
 # Ignore specific files inside `pages/`
 pages/ABESIT.py
 pages/Python_practice.py
